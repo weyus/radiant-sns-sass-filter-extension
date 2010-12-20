@@ -8,9 +8,8 @@ class SnsSassFilter < StylesheetFilter
     # just make sure you know the consequences of doing so (including
     # that you may need to update all your stylesheets to yield a new
     # LAST-MODIFIED date from the cache.
-    @sass_options = {}
+    @sass_options = Compass.sass_engine_options
   end
-
 
   def filter(text)
     begin
